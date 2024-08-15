@@ -1,0 +1,12 @@
+<odoo>
+    <record id="server_action_inherit_payment" model="ir.actions.server">
+        <field name="name">Payment</field>
+        <field name="model_id" ref="point_of_sale.model_pos_order"/>
+        <field name="binding_model_id" ref="point_of_sale.model_pos_order"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+            action=records.action_payment()
+        </field>
+    </record>
+</odoo>
